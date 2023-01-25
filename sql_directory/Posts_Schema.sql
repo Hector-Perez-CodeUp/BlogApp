@@ -1,0 +1,6 @@
+DROP DATABASE IF EXISTS posts_db;
+
+CREATE DATABASE IF NOT EXISTS posts_db;
+
+USE posts_db;
+
