@@ -10,13 +10,14 @@
 
     <h1>Log In</h1>
     <div th:if="${param.error}">
-        Invalid Username and Password.
+        <h3>Barking up the wrong tree!  Invalid username and/or password</h3>
     </div>
     <div th:if="${param.logout}">
-        You have been logged out.
+        <h3>You've been logged out.  Howl I ever live without you?</h3>
     </div>
-
-    <div sec:authorize="isAuthenticated()">You're already logged in</div>
+    <div sec:authorize="isAuthenticated()">
+        <h3>Ruff day?  You're already logged in!</h3>
+    </div>
 
     <div class="container mb-4">
         <form th:action="@{/login}" method="post" sec:authorize="!isAuthenticated()">
@@ -35,7 +36,7 @@
     </div>
 
     <div class="container mb-4 row" sec:authorize="!isAuthenticated()">
-        <label for="create-account">Don't have an account? Click here to create one.</label>
+        <label for="create-account">Create an account to be friends fur-ever!</label>
         <a href="/sign-up"><button id="create-account" class="btn btn-danger">Create an account</button></a>
     </div>
 

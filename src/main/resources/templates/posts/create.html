@@ -10,25 +10,20 @@
 <div class="container mt-4">
     <form th:action="@{/create}" th:method="POST" th:object="${post}">
         <div class="card">
-            <div class="card-header">
-                <p class="fw-bold">Create a post</p>
+            <div class="card-header text-center">
+                <h3>Post your pupper thoughts below</h3>
             </div>
             <div class="card-body">
-                <div class="mb-3">
-                    <label for="title" class="form-label">Enter a title for your post</label>
-                    <input th:field="*{title}" name="title" type="text" class="form-control" id="title" placeholder="title">
-                </div>
-                <div class="mb-3">
-                    <label for="body" class="form-label">Enter post here</label>
-                    <textarea th:field="*{body}" name="body" class="form-control" id="body" rows="5"></textarea>
-                </div>
+                <label for="title" class="form-label">Ruff</label>
+                <input th:field="*{title}" name="title" type="text" class="form-control mb-3" id="title" placeholder="title">
+                <label for="body" class="form-label">Woof woof woof</label>
+                <textarea th:field="*{body}" name="body" class="form-control mb-3" id="body" rows="5" placeholder="title"></textarea>
             </div>
             <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Submit Post</button>
             </div>
         </div>
     </form>
-
 </div>
 
 <th:block th:replace="~{partials/footer.html :: footer}"></th:block>

@@ -1,19 +1,20 @@
 package com.codeup.spring.models;
-
+// Imports
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Entity
+@Table(name = "posts")
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-@Entity
-@Table(name = "posts")
 public class Post {
 
+    // Create Table
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
